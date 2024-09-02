@@ -1,0 +1,9 @@
+Keana Patman
+Prof. Cassens
+Creative Coding I
+1 September 2024
+
+
+Comparing the GUI and the CLI
+A GUI directory is a graphical user interface and a CLI is a command line interface. The GUI is what the normal person sees when on their computer. It shows icons and visuals of different directories on which a person can click on. The CLI is more text based where the interface is a bunch of command-like lines. GUI is simple to use for organization on your computer. It visually shows all the different folders and files on a computer and the user can easily access them by clicking the icons. CLI takes more time to learn, but can be useful when the GUI isn’t working properly or if you want to change things in your computer a different way. CLI uses more coding-based knowledge to be used properly which could help develop those coding skills. Comparing the two, the GUI is easier to understand at first, because most people are visual learners and it’s easier to understand and put together how every icon works by putting a picture to a memory or idea. Writing code to move around interfaces is not everyone’s forte, and is more confusing to the everyday person. Using the interface efficiently could take a lot of time and memorization of the different commands and that could be too much to handle or deal with for a busy person. I think both are handy tools to know and use. The GUI certainly comes quick and is easily understandable and learnable. The CLI does seem like a fun way to do through directories, but is a little more out there and not as easily as understandable or learnable as the GUI. All in all I think both interfaces are pretty neat and definitely something to look more into.
+
