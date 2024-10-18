@@ -1,0 +1,76 @@
+<html>
+    <title>FUN MATH GAME</title>
+    
+    <head>
+      <script>
+        var actualAnswer;
+        var i = 1;
+        var correct = 0;
+        var incorrect = 0;
+
+        function printQuestion() 
+        {
+          var number1 = Math.floor(Math.random() * 10);
+          var number2 = Math.floor(Math.random() * 10);
+          actualAnswer = number1 * number2;
+          document.getElementById("question").innerHTML = "What is " + number1 + " * " + number2 + "?";
+        }
+    
+        function checkAnswer() 
+        {
+          var answer = document.getElementById("txtAnswer").value;
+          if (answer == actualAnswer && i<10) 
+          {
+            document.getElementById("finalResult").innerHTML = "Good job!"; 
+            printQuestion();
+            i = i+1; 
+            correct = correct + 1;
+          } 
+          else if(answer !== actualAnswer && i<10)
+          {
+            document.getElementById("finalResult").innerHTML = "Sorry, wrong answer!";
+            printQuestion();
+            i = i+1;
+            incorrect = incorrect + 1;
+          }
+          else if(answer == actualAnswer && i==10)
+          {
+            correct = correct + 1;
+            document.getElementById("finalResult").innerHTML = "Good Job! You're Finished!";
+            printCorrect();
+          }
+          else if (answer !== actualAnswer && i==10)
+          {
+            incorrect = incorrect + 1;
+            document.getElementById("finalResult").innerHTML = "Sorry! You're Finished!";
+            printCorrect();
+          }
+        }
+
+        function printCorrect()
+        {
+            document.getElementById("showCorrect").innerHTML = "You got " + correct + "/" + i + " questions correct and " + incorrect + "/" + i + " questions incorrect!";
+            var percent = (correct/i) * 100
+            document.getElementById("showPercent").innerHTML = "That is " + percent + "% of questions correct!";
+        }
+      </script>
+    </head>
+    
+    <body onload="printQuestion();" style="background-color: blanchedalmond;">
+        <h3>Welcome to the Math Game!</h3>
+        <p>Answer 10 questions and test your knowledge!</p>
+        <span id="question"></span><br>
+
+        Your answer:<br>
+
+        <input type="text" id="txtAnswer"><br>
+        <button id="btnSubmit" onClick="checkAnswer();">Submit</button><br>
+    
+      <p><span id="finalResult"></span></p>
+      <span id="showCorrect"></span><br>
+      <span id="showPercent"></span><br><br>
+
+      <a href="homepage.html" style="text-decoration-color: indianred;">Home Page</a>
+    </body>
+    
+    </html>

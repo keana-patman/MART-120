@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Third Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <script>
+    function checkFirst()
+        {
+            var firstName = document.getElementById("fName").value;
+            if(firstName == "")
+            {
+                document.getElementById("fName").focus();
+                document.getElementById("fName").style.backgroundColor = "red";
+                document.getElementById("fNameMessage").innerHTML = "* Required";
+                document.getElementById("fNameMessage").style.color = "red";
+                return false;
+            }
+            else(firstName !== "")
+            {
+                document.getElementById("fName").style.backgroundColor = "White";
+                document.getElementById("fNameMessage").innerHTML = "";
+                return true;
+            }
+        }  
+   </script>
+   <script> 
+    function checkLast()
+        {
+            var lastName = document.getElementById("lName").value;
+            if(lastName == "")
+            {
+                document.getElementById("lName").focus();
+                document.getElementById("lName").style.backgroundColor = "red";
+                document.getElementById("lNameMessage").innerHTML = "* Required";
+                document.getElementById("lNameMessage").style.color = "red";
+                return false;
+            }
+            else(lastName !== "")
+            {
+                document.getElementById("lName").style.backgroundColor = "White";
+                document.getElementById("lNameMessage").innerHTML = "";
+                return true;
+            }
+        }
+    </script>
+    <script> 
+        function checkEmail()
+            {
+                var Email = document.getElementById("email").value;
+                if(Email == "")
+                {
+                    document.getElementById("email").focus();
+                    document.getElementById("email").style.backgroundColor = "red";
+                    document.getElementById("emailMessage").innerHTML = "* Required";
+                    document.getElementById("emailMessage").style.color = "red";
+                    return false;
+                }
+                else(Email !== "")
+                {
+                    document.getElementById("email").style.backgroundColor = "White";
+                    document.getElementById("emailMessage").innerHTML = "";
+                    return true;
+                }
+            }
+        </script>
+        <script> 
+            function checkRadio()
+           {
+                if(document.getElementById("checkedYes").checked)
+                {
+                    document.getElementById("checkMessage").innerHTML = "";
+                    document.getElementById("checkMessage").style.color = "white";
+                    return true;
+                }
+                else if(document.getElementById("checkedNo").checked)
+                {
+                    document.getElementById("checkMessage").innerHTML = "* Required to Click 'YES' to Continue";
+                    document.getElementById("checkMessage").style.color = "red";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById("checkMessage").innerHTML = "* Required to Click 'YES' to Submit";
+                    document.getElementById("checkMessage").style.color = "red";
+                    return false;
+                }
+           }
+        </script>
+
+</head>
+<body>
+    <h3> Contact Us</h3><br>
+    Please insert:<br><br>
+    
+        First Name: <input type="text" id="fName"><span id="fNameMessage"></span><br>
+        Last Name: <input type="text" id="lName"><span id="lNameMessage"></span><br><br>
+        Email: <input typr="text" id="email"><span id="emailMessage"></span><br><br>
+        Do you accept these Terms Of Service? <span id="checkMessage"></span><br>
+        <input type="radio" name="answer" value="yes" id="checkedYes">YES<br>
+        <input type="radio" name="answer" value="no" id="checkedNo">NO<br><br>
+        <button id="buttonSubmit" class=" btn btn-primary" onclick="checkEmail(); checkLast(); checkFirst(); checkRadio();">Submit </button>
+        
+   
+
+   
+    <br><br>
+    <button><a href="homepage.html"> Go to Home Page</a></button><br>
+    <button><a href="secondpage.html"> Go to Second Page</a></button>
+</body>
+</html>

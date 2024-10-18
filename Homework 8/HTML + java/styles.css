@@ -1,0 +1,29 @@
+.classOne{
+    background-color: cadetblue;
+    color: azure;
+}
+.classTwo{
+    background-color: rgb(248, 238, 224);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+#idOne{
+    background-color: lightseagreen;
+    text-decoration-color:indianred;
+    font-family: cursive;
+    font-weight: bolder;
+}
+#idTwo{
+    background-color: lightseagreen;
+    text-decoration-color: darkseagreen;
+    font-family:cursive;
+    font-weight: bolder;
+}
+body{
+    background-color: darkolivegreen;
+    background-image: url(https://media.istockphoto.com/id/1372132668/vector/silhouette-forest-background-forest-panorama-view-3d-wood-or-forest-background.jpg?s=612x612&w=0&k=20&c=QgsQQQEEt7r2zO54qF107pih2fZ9mN3UUfIE-ZUOtUM=);
+    background-blend-mode:soft-light;
+}
+span{
+    color: white;
+}
